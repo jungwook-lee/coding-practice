@@ -30,6 +30,7 @@ class Tree(object):
         new_node.right = self.__build((i*2)+2, x)
         return new_node
 
+    # TODO: Implement feature to print "inorder", "preorder", "postorder"
     def print_tree(self):
         """ Simple In-order Print of a Tree object """
         if self.head is None:
