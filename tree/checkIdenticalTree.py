@@ -6,9 +6,15 @@ from tree import TreeNode, Tree
 """
 
 # TODO:recursive
-def checkIdenticalTree(t1, t2)
-    pass
+def checkIdenticalTree(t1, t2):
+    if not t1 and not t2:
+        return True
+    elif (not t1) ^ (not t2):
+        return False
+    elif t1.val == t2.val:
+        return checkIdenticalTree(t1.left, t2.left) and \
+               checkIdenticalTree(t1.right, t2.right)
+    else:
+        return False
 
 # TODO:iterative 
-def checkIdenticalTree(t1, t2)
-    pass
