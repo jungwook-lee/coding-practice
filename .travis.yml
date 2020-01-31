@@ -1,1 +1,8 @@
 language: python
+python:
+  - "3.6"
+# This is for bypassing installation
+# This project only uses the core python lib
+install: true
+script:
+  - sh run_tests.sh
