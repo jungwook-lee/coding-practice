@@ -25,5 +25,9 @@ class TreeTestCase(unittest.TestCase):
         with self.assertRaises(TypeError): build_tree({})
         with self.assertRaises(TypeError): build_tree(0)
 
+    def test_build_none(self):
+        root = build_tree([])
+        self.assertEqual(root, None)
+
 if __name__ == '__main__':
     unittest.main()
