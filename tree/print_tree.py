@@ -1,16 +1,20 @@
-# Simple recursive inorder print
-def print_preorder(root):
-    """ returns values of given tree as list """
+# Simple recursive print
+def print_recursive(root, order="pre"):
     if not root:
         return []
+    if not order in ["pre", "post", "in"]:
+        raise ValueError("Invalid tree order method")
     def convert(root, out):
         if not root:
             return
-        out.append(root.val)
-        if root.left:
-            convert(root.left, out)
-        if root.right:
-            convert(root.right, out)
+        if order == "pre":
+            out.append(root.val)
+        convert(root.left, out)
+        if order == "in":
+            out.append(root.val)
+        convert(root.right, out)
+        if order == "post":
+            out.append(root.val)
         return out
     return convert(root, [])
 
@@ -47,4 +51,3 @@ def print_preorder_iter(root):
             break
         cur = stack.pop()
     return out
-
