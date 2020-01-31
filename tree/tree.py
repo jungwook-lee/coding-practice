@@ -7,43 +7,22 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
-class Tree(object):
-    def __repr__(self):
-        return "<Tree {}>".format(id(self.head))
+def build_tree(arr):
+    if not isinstance(arr, list):
+        raise TypeError('build_tree only takes in lists')
 
-    def __init__(self, x):
-        """ Construct a tree from a heap """
-        if not isinstance(x, list):
-            raise TypeError('must be a list')
-        self.head = self.__build(0, x)
-
-    def __build(self, i, x):
+    def build(i, arr):
         # Exit when list is too big
-        if i >= len(x):
+        if i >= len(arr):
             return None
-        if x[i] is None:
+        if arr[i] is None:
             return None
+
         # Add the new node
-        new_node = TreeNode(x[i])
+        new_node = TreeNode(arr[i])
         # Insert insert left, right
-        new_node.left = self.__build((i*2)+1, x)
-        new_node.right = self.__build((i*2)+2, x)
+        new_node.left = build((i * 2) + 1, arr)
+        new_node.right = build((i * 2) + 2, arr)
         return new_node
 
-    # TODO: Implement feature to print "inorder", "preorder", "postorder"
-    def print_tree(self):
-        """ Simple In-order Print of a Tree object """
-        if self.head is None:
-            print ("Tree is empty!")
-            
-        def print_h(head):
-            if head is None:
-                print('None')
-            else:
-                print(head)
-                print_h(head.left)
-                print_h(head.right)
-
-        return print_h(self.head)
-
-
+    return build(0, arr)
