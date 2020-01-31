@@ -34,9 +34,11 @@ def print_inorder_iter(root):
 
 # Preorder method with stack
 def print_preorder_iter(root):
-    cur, stack = root, []
+    if not root:
+        return []
+    cur, stack, out = root, [], []
     while True:
-        print(cur.val)
+        out.append(cur.val)
         if cur.right:
             stack.append(cur.right)
         if cur.left:
@@ -44,4 +46,5 @@ def print_preorder_iter(root):
         if not stack:
             break
         cur = stack.pop()
+    return out
 
