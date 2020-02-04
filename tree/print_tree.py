@@ -51,3 +51,21 @@ def print_preorder_iter(root):
             break
         cur = stack.pop()
     return out
+
+# TODO: Postorder method with stack
+""" Leetcode [Hard] Problem, revisit """
+def print_postorder_iter(root):
+    if not root:
+        return []
+    cur, stack, out = root, [], []
+    while True:
+        while cur:
+            stack.append(cur)
+            if cur.right:
+                stack.append(cur.right)
+            cur = cur.left
+        if not stack:
+            break
+        node = stack.pop()
+        out.append(node.val)
+        cur = node
