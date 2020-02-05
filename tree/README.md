@@ -9,4 +9,5 @@ https://medium.com/@codingfreak/binary-tree-interview-questions-and-practice-pro
 - For iterative approaches stacks are usuful in traversing the tree
   - Sometimes 2 stacks are necessary to implement
   - Being able to formulate iterative traverals are key
-  
+- Level-order traversals are useful for:
+  - Figuring out height
