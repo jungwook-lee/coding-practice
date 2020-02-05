@@ -1,9 +1,9 @@
 from collections import deque
 
 # recursive solution
-""" runtime O(n), space O(n) [at worst need to store whole tree] """
+""" runtime O(n), space O(n) """
 def getHeight(root):
-    if not rot:
+    if not root:
         return 0
     return 1 + max(getHeight(root.left), getHeight(root.right))
 
