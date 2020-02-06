@@ -21,8 +21,8 @@ https://medium.com/@codingfreak/binary-tree-interview-questions-and-practice-pro
 - [x] Inorder Tree Traversal | Iterative & Recursive
 - [x] Preorder Tree Traversal | Iterative & Recursive
 - [ ] Postorder Tree Traversal | Iterative & Recursive
-- [ ] Level Order Traversal of Binary Tree
-- [ ] Spiral Order Traversal of Binary Tree
+- [x] Level Order Traversal of Binary Tree
+- [x] Spiral Order Traversal of Binary Tree
 - [ ] Reverse Level Order Traversal of Binary Tree
 - [ ] Print all nodes of a given binary tree in specific order
 - [ ] Print Left View of a Binary Tree
