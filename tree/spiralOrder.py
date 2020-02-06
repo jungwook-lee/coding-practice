@@ -1,7 +1,7 @@
 from collections import deque
 
 # Implement recursive version of spiral order traversal
-""" Runtime O(n), Space of O(n) """
+""" Runtime O(n^2) """
 def spiralOrderTraverse(root):
     if not root:
         return
@@ -32,6 +32,7 @@ def printLevel(root, level, swap):
     return l_bool or r_bool
 
 # Implement a iterative version
+""" Runtime O(n), Space O(n) """
 def spiralOrderTraverse_iter(root):
     if not root:
         return
