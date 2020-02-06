@@ -12,6 +12,7 @@ https://medium.com/@codingfreak/binary-tree-interview-questions-and-practice-pro
 - Level-order traversals are useful for:
   - Figuring out height
   - Sprial order is an extension of level order, (good interview practice question)
+- Knowing how to do Level-order(BFS) both itertively, recursively is important
 
 
 ## Tree Questions Checklist:
@@ -25,7 +26,7 @@ https://medium.com/@codingfreak/binary-tree-interview-questions-and-practice-pro
 - [x] Spiral Order Traversal of Binary Tree
 - [ ] Reverse Level Order Traversal of Binary Tree
 - [ ] Print all nodes of a given binary tree in specific order
-- [ ] Print Left View of a Binary Tree
+- [x] Print Left View of a Binary Tree
 - [ ] Print Right View of a Binary Tree
 - [ ] Print Top View of Binary Tree
 - [ ] Find next node in same level for given node in a binary tree

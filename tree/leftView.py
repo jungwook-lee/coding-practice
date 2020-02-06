@@ -1,7 +1,8 @@
-from collections import defaultdict
+from collections import defaultdict, deque
 from tree import build_tree
 
-def leftView(root):
+""" Runtime O(n), Space O(n) """
+def leftView_hash(root):
     # Strategy: store level order, print first item in each level
     mem = defaultdict(list)
     
@@ -16,7 +17,7 @@ def leftView(root):
     for _, val in mem.items():
         print(val[0])
 
-
+""" Runtime O(n), Space O(h) to store stack """
 def leftView_recur(root):
     # Strategy: have flag for last level to be printed, while preorder traversal
     if not root:
@@ -34,9 +35,29 @@ def leftView_recur(root):
 
     printFirstInLevel(root, 1, last)
 
+""" Runtime O(n), Space O(n) to store all nodes """
+def leftView_iter(root):
+    # Strategy: same level order, just print first one
+    if not root:
+        return
+    q = deque()
+    q.append(root)
+    while q:
+        cur_size = len(q)
+        for i in range(cur_size):
+            node = q.popleft()
+            if i == 0:
+                print(node.val)
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+
+
 if __name__ == '__main__':
    test_in = build_tree([1,2,3,None,4,5,6,None,None,None,None,None,7,8])
-   leftView(test_in)
+   leftView_hash(test_in)
    leftView_recur(test_in)
+   leftView_iter(test_in)
 
 
