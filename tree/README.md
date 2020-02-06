@@ -11,7 +11,7 @@ https://medium.com/@codingfreak/binary-tree-interview-questions-and-practice-pro
   - Being able to formulate iterative traverals are key
 - Level-order traversals are useful for:
   - Figuring out height
-  - Sprial order is an extension of level order
+  - Sprial order is an extension of level order, (good interview practice question)
 
 
 ## Tree Questions Checklist:
