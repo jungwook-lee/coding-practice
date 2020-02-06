@@ -1,6 +1,6 @@
-from collections import deque
+from collections import deque, defaultdict
 
-# Implement recursive version of spiral order traversal
+# Recursive version of spiral order traversal
 """ Runtime O(n^2) """
 def spiralOrderTraverse(root):
     if not root:
@@ -31,7 +31,7 @@ def printLevel(root, level, swap):
 
     return l_bool or r_bool
 
-# Implement a iterative version
+# Iterative version
 """ Runtime O(n), Space O(n) """
 def spiralOrderTraverse_iter(root):
     if not root:
@@ -61,9 +61,32 @@ def spiralOrderTraverse_iter(root):
 
         even = not even
 
+# Hashing version
+""" Runtime O(n), Space O(n) """
+def spiralOrderTraverse_hash(root):
+    # declare memory
+    mem = defaultdict(list)
+    
+    def store_tree(root, level, mem):
+        if not root:
+            return
+        mem[level].append(root.val)
+        store_tree(root.left, level + 1, mem)
+        store_tree(root.right, level + 1, mem)
+
+    store_tree(root, 1, mem)
+    # print the tree in reverse
+    for key, val in mem.items():
+        if (key % 2):
+            val = reversed(val)
+        for num in val:
+            print(num)
+
+# TODO: Write tests
 if __name__ == '__main__':
     from tree import build_tree
     test_in = build_tree([1,2,3,4,5,6,7])
     spiralOrderTraverse(test_in)
     spiralOrderTraverse_iter(test_in)
+    spiralOrderTraverse_hash(test_in)
 
