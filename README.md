@@ -6,4 +6,4 @@
 
 #### Useful Blogs
 - [Preparing for Programming Interview as a Ph.D Student with Python](https://medium.com/@ratulsaha/preparing-for-programming-interview-as-a-phd-student-with-python-5f8af8b40d5f)
-
+- [Programming Interview Tips by Philip Guo](http://www.pgbovine.net/programming-interview-tips.htm)
