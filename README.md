@@ -11,6 +11,9 @@
 
 #### Quick Review Notes
 
+##### String
+- use join(), split() as needed
+
 ##### Tree
 - Only root node has height of **0**
 - **Complete** Tree are: left-leaning, filled to last level
