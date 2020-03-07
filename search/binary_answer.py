@@ -1,6 +1,6 @@
 def binary_search(num, val):
-    l, r = 0, len(num)
-    while l < r:
+    l, r = 0, len(num) - 1
+    while l <= r:
         mid = l + (r - l) // 2
         if num[mid] == val:
             return mid
@@ -14,3 +14,5 @@ def binary_search(num, val):
 if __name__ == '__main__':
     test = [1,2,3,4,5,6,7,8]
     print(binary_search(test, 7))
+    print(binary_search(test, 8))
+    print(binary_search(test, 1))
